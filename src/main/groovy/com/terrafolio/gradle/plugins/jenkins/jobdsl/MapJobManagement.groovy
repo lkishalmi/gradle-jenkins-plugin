@@ -16,6 +16,8 @@ import javaposse.jobdsl.dsl.helpers.ExtensibleContext
  * Created by ghale on 4/6/14.
  */
 class MapJobManagement extends AbstractJobManagement {
+    final static String REFERENCE_VERSION = '1.625.3'
+    
     Map map
     Map parameters
 
@@ -111,7 +113,7 @@ class MapJobManagement extends AbstractJobManagement {
 
     @Override
     VersionNumber getJenkinsVersion() {
-        return null
+        return new VersionNumber(REFERENCE_VERSION)
     }
 
     @Override
